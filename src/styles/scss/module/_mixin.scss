@@ -1,0 +1,16 @@
+// Flex
+@mixin flex($justify: space-between, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Hover
+@mixin hover($time: 0.3s, $timing_function: ease-in-out, $property: color) {
+  &:hover {
+    transition: $property $time $timing_function;
+  }
+  &:not(:hover) {
+    transition: $property $time $timing_function;
+  }
+}

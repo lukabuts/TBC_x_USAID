@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="src/styles/css/style.css">
-</head>
-<body>
-    <script src="src/js/main.js"></script>
-</body>
+    <link rel="stylesheet" href="src/styles/css/style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="wrapper">
+        <div class="header_content">
+          <!-- Logo -->
+          <div class="logo">
+            <img
+              width="182"
+              height="40"
+              src="src/images/tbc_logo.svg"
+              alt="TBC Logo"
+            />
+          </div>
+
+          <!-- Nav Bar -->
+          <nav id="nav">
+            <ul>
+              <li>
+                <a href="#">მთავარი</a>
+              </li>
+              <li>
+                <a href="#">TBC IT</a>
+              </li>
+              <li>
+                <a href="#" class="active">TBC x USAID</a>
+              </li>
+              <li>
+                <a href="#">რისკები</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Burger Button -->
+          <button id="burger_btn">
+            <label for="burger">
+              <input class="hidden" id="burger" type="checkbox" />
+              <span></span>
+            </label>
+          </button>
+        </div>
+      </div>
+    </header>
+    <script src="src/js/header.js"></script>
+  </body>
 </html>
