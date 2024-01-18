@@ -29,6 +29,7 @@ button {
 
 body {
   overflow-x: hidden;
+  min-height: 200vh;
 }
 
 #header {
@@ -71,8 +72,8 @@ body {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  padding: 0 20px;
-  max-width: 61.25rem;
+  padding: 0 1.25rem;
+  max-width: 63.75rem;
 }
 #header .wrapper .header_content nav {
   background-color: rgb(26, 30, 31);
@@ -132,7 +133,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 15px;
-    padding: 15px 20px 15px 40px;
+    padding: 15px 1.25rem 15px 40px;
   }
   #header .wrapper .header_content nav ul li a {
     padding: 0;
