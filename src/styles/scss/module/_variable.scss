@@ -2,8 +2,10 @@
 $white_color: rgb(244, 244, 244);
 $blue_color: rgb(0, 163, 224);
 $dark_bg: rgb(43, 43, 43);
+$darkest_color: rgb(22, 22, 22);
 $header_dark_bg: rgb(26, 30, 31);
 $header_light_bg: rgba(34, 34, 34, 0.949);
+$course_div_border_color: rgba(85, 85, 85, 1);
 
 // Spacing
 $max_content_width: 63.75rem;
@@ -12,6 +14,15 @@ $header_height: 5.25rem;
 $sention1_height: 22rem;
 $section2_y_padding: 3.5rem;
 $section2_content_gap: 2.75rem;
+$section3_y_padding: 3.625rem;
+$section3_gap: 4.125rem;
+$course_div_height: 25.875rem;
+$course_div_min_width: 12.5rem;
+$course_div_max_width: 18.75rem;
+$course_desc_gap: 1.563rem;
+$course_desc_padding: 1rem;
+$course_img_height: 9.375rem;
+$courses_gap: 2.5rem 1.75rem;
 
 // Screen Width
 $medium_screen: 62.5rem;
