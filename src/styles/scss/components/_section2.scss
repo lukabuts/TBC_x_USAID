@@ -1,0 +1,24 @@
+.section2 {
+  background-color: $dark_bg;
+  .content {
+    padding: $section2_y_padding $content_x_padding;
+    max-width: $max_content_width;
+    margin: auto;
+    p {
+      font-size: $medium_font_size;
+      margin-bottom: $section2_content_gap;
+      line-height: 2.6rem;
+    }
+    .more_btn {
+      a {
+        color: $blue_color;
+        font-weight: bold;
+        font-size: 1.4rem;
+        @include hover;
+        &:hover {
+          color: $white_color;
+        }
+      }
+    }
+  }
+}
