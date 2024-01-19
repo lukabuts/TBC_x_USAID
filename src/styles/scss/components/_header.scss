@@ -12,7 +12,10 @@
     .wrapper {
       .header_content {
         nav {
-          background-color: $header_light_bg;
+          @media only screen and (max-width: $medium_screen) {
+            background-color: $header_light_bg;
+          }
+          
         }
       }
     }
@@ -33,7 +36,6 @@
 
       // Nav Bar
       nav {
-        background-color: $header_dark_bg;
         transition: 0.3s ease-in-out;
         ul {
           @include flex;
@@ -58,6 +60,7 @@
           right: -100%;
           top: 100%;
           border-radius: 0 0 0 20px;
+          background-color: $header_dark_bg;
           &.active {
             right: 0;
           }

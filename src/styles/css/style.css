@@ -9,6 +9,7 @@
 
 html {
   color: rgb(244, 244, 244);
+  font-family: sans-serif;
 }
 
 ul,
@@ -29,7 +30,6 @@ button {
 
 body {
   overflow-x: hidden;
-  min-height: 200vh;
 }
 
 #header {
@@ -44,8 +44,10 @@ body {
 #header.active {
   background-color: rgba(34, 34, 34, 0.949);
 }
-#header.active .wrapper .header_content nav {
-  background-color: rgba(34, 34, 34, 0.949);
+@media only screen and (max-width: 62.5rem) {
+  #header.active .wrapper .header_content nav {
+    background-color: rgba(34, 34, 34, 0.949);
+  }
 }
 #header .wrapper {
   position: relative;
@@ -76,7 +78,6 @@ body {
   max-width: 63.75rem;
 }
 #header .wrapper .header_content nav {
-  background-color: rgb(26, 30, 31);
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
@@ -114,6 +115,7 @@ body {
     right: -100%;
     top: 100%;
     border-radius: 0 0 0 20px;
+    background-color: rgb(26, 30, 31);
   }
   #header .wrapper .header_content nav.active {
     right: 0;
@@ -219,4 +221,43 @@ body {
     -webkit-transform: translateY(0.525rem) rotate(-45deg);
             transform: translateY(0.525rem) rotate(-45deg);
   }
+}
+
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 22rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.section1 h3 {
+  font-size: 2.5rem;
+  width: 100%;
+  max-width: 63.75rem;
+  margin: auto;
+  padding: 0 1.25rem;
+}
+.section1 h3 span {
+  line-height: 1.6rem;
+}
+.section1 .img-div {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 22rem;
+  background-color: black;
+  z-index: -1;
+}
+.section1 .img-div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
