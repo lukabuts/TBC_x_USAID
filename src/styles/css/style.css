@@ -28,6 +28,10 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   overflow-x: hidden;
 }
@@ -290,4 +294,101 @@ body {
 }
 .section2 .content .more_btn a:hover {
   color: rgb(244, 244, 244);
+}
+
+.section3 {
+  background: rgb(22, 22, 22);
+}
+.section3 h2 {
+  margin-bottom: 4.125rem;
+  font-weight: 500;
+}
+.section3 .content {
+  padding: 3.625rem 1.25rem;
+  max-width: 63.75rem;
+  margin: auto;
+}
+.section3 .content #courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12.5rem, 18.75rem));
+  grid-auto-flow: row;
+  grid-auto-rows: 25.875rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2.5rem 1.75rem;
+}
+.section3 .content #courses .course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 6px;
+  overflow: hidden;
+}
+.section3 .content #courses .course .image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 9.375rem;
+}
+.section3 .content #courses .course .description {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  gap: 1.563rem;
+  width: 100%;
+}
+.section3 .content #courses .course .description .details {
+  justify-self: end;
+  margin-top: auto;
+}
+.section3 .content #courses .course .description .details a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  color: rgb(0, 163, 224);
+  font-weight: bold;
+}
+.section3 .content #courses .course .description .details a:hover {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section3 .content #courses .course .description .details a:not(:hover) {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section3 .content #courses .course .description .details a:hover {
+  color: #007ead;
 }
