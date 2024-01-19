@@ -1,6 +1,6 @@
 const courses_div = document.getElementById("courses");
 
-fetch("src/courses-info/courses.json")
+fetch("src/data/courses.json")
   .then((res) => res.json())
   .then((data) => {
     generateCoursesSection(Object.values(data));

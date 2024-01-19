@@ -1,0 +1,30 @@
+{
+  "USAID": {
+    "name": "USAID ამერიკელი ხალხისგან",
+    "image": "./src/images/partners/usaid.webp"
+  },
+  "Space Int.": {
+    "name": "Space Int.",
+    "image": "./src/images/partners/space_int.webp"
+  },
+  "Tineti": {
+    "name": "თინეთი",
+    "image": "./src/images/partners/tineti.webp"
+  },
+  "Tegeta Holding": {
+    "name": "თეგეტა ჰოლდინგი",
+    "image": "./src/images/partners/tegeta_logo.webp"
+  },
+  "Spectre": {
+    "name": "Spectre",
+    "image": "./src/images/partners/spectre.webp"
+  },
+  "TBC Leasing": {
+    "name": "თიბისი ლიზინგი",
+    "image": "./src/images/partners/tbc_leasing.webp"
+  },
+  "UFC": {
+    "name": "UFC მულტისაგადასახადო სისტემები",
+    "image": "./src/images/partners/ufc.webp"
+  }
+}
