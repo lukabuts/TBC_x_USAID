@@ -1,55 +1,55 @@
 {
   "iOS Development": {
     "name": "iOS Development",
-    "image": "./src/images/ios_development.webp",
+    "image": "./src/images/courses/ios_development.webp",
     "finished": true,
     "details": "#"
   },
   "React": {
     "name": "React",
-    "image": "./src/images/react.webp",
+    "image": "./src/images/courses/react.webp",
     "finished": true,
     "details": "#"
   },
   "Intro to Python": {
     "name": "Intro to Python",
-    "image": "./src/images/python.webp",
+    "image": "./src/images/courses/python.webp",
     "finished": true,
     "details": "#"
   },
   "Advanced Python": {
     "name": "Advanced Python",
-    "image": "./src/images/python.webp",
+    "image": "./src/images/courses/python.webp",
     "finished": true,
     "details": "#"
   },
   "Advanced Cybersecurity Course": {
     "name": "Advanced Cybersecurity Course",
-    "image": "./src/images/cybersecurity.webp",
+    "image": "./src/images/courses/cybersecurity.webp",
     "finished": true,
     "details": "#"
   },
   "ToT - Training of Trainers": {
     "name": "ToT - Training of Trainers",
-    "image": "./src/images/tot.webp",
+    "image": "./src/images/courses/tot.webp",
     "finished": true,
     "details": "#"
   },
   "Blockchain": {
     "name": "Blockchain",
-    "image": "./src/images/blockchain.webp",
+    "image": "./src/images/courses/blockchain.webp",
     "finished": true,
     "details": "#"
   },
   "DevOps": {
     "name": "DevOps",
-    "image": "./src/images/devops.webp",
+    "image": "./src/images/courses/devops.webp",
     "finished": true,
     "details": "#"
   },
   "Information Security Governance": {
     "name": "Information Security Governance",
-    "image": "./src/images/information_security_governance.webp",
+    "image": "./src/images/courses/information_security_governance.webp",
     "finished": true,
     "details": "#"
   }
