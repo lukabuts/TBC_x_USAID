@@ -261,3 +261,33 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.section2 {
+  background-color: rgb(43, 43, 43);
+}
+.section2 .content {
+  padding: 3.5rem 1.25rem;
+  max-width: 63.75rem;
+  margin: auto;
+}
+.section2 .content p {
+  font-size: 1.75rem;
+  margin-bottom: 2.75rem;
+  line-height: 2.6rem;
+}
+.section2 .content .more_btn a {
+  color: rgb(0, 163, 224);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.section2 .content .more_btn a:hover {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section2 .content .more_btn a:not(:hover) {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section2 .content .more_btn a:hover {
+  color: rgb(244, 244, 244);
+}
