@@ -1,0 +1,109 @@
+.section4 {
+  position: relative;
+  padding: $section4_y_padding;
+  background-color: $dark_bg;
+
+  h2 {
+    font-weight: 500;
+    max-width: $max_content_width;
+    padding: 0 $content_x_padding;
+    margin: auto;
+    width: 100%;
+    margin-bottom: 4rem;
+
+    @media only screen and (max-width: $small_screen) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  // Content
+  .wrapper {
+    @include flex;
+    .content {
+      max-width: $max_content_width;
+      padding: 0 $content_x_padding;
+      margin: auto;
+      width: 100%;
+
+      #partners_div {
+        @include flex($justify: space-between);
+        gap: 1.25rem;
+        min-height: 6.25rem;
+        opacity: 1;
+        transition: 0.2s ease-in-out;
+
+        @media only screen and (max-width: $small_screen) {
+          flex-direction: column;
+          min-height: 17.5rem;
+        }
+
+        &.fade {
+          opacity: 0;
+        }
+
+        img {
+          margin: auto;
+        }
+      }
+    }
+
+    // Button
+    button.partner_section_btn {
+      margin-left: $section4_btn_margin;
+      @media only screen and (max-width: $lg_screen) {
+        margin-left: calc($section4_btn_margin / 2);
+      }
+
+      @media only screen and (max-width: $lg_screen) and (min-width: $small_screen) {
+        display: none;
+      }
+
+      @media only screen and (max-width: $smallest_screen) {
+        display: none;
+      }
+      svg {
+        path {
+          fill: $white_color;
+          transition: 0.3s ease-in-out;
+        }
+      }
+
+      // While hovering
+      &:hover {
+        svg {
+          path {
+            fill: darken($color: $white_color, $amount: 40%);
+          }
+        }
+      }
+
+      // Second button
+      &:nth-of-type(2) {
+        transform: rotate(180deg);
+        margin-right: $section4_btn_margin;
+        margin-left: 0;
+
+        @media only screen and (max-width: $lg_screen) {
+          margin-right: calc($section4_btn_margin / 2);
+        }
+      }
+    }
+  }
+
+  // Nav
+  nav {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    @include flex($justify: center);
+    gap: 0.75rem;
+    button {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background: $white_color;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}
