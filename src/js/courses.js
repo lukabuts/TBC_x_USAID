@@ -27,7 +27,7 @@ function generateCoursesSection(data) {
         <!-- Dertails -->
         <div class="details">
           <a href=${course.details}>
-            <img src="./src/images/arrow.svg" alt="arrow" />
+            <img src="./src/images/courses/arrow.svg" alt="arrow" />
             კურსის დეტალები</a
           >
         </div>
