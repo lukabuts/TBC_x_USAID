@@ -5,6 +5,15 @@ const partner_section_buttons = document.querySelectorAll(
 );
 
 let partnerNumber = 3;
+let autoPartnerIncrease;
+
+// Timeout Function - Showing more partners
+function timeoutFunction() {
+  autoPartnerIncrease = setInterval(() => {
+    partnerNumber += 3;
+    getData(partnerNumber);
+  }, 3000);
+}
 
 // Small dots
 partner_section_buttons.forEach((btn) => {
@@ -18,6 +27,8 @@ partner_section_buttons.forEach((btn) => {
     }
 
     getData(partnerNumber);
+    clearInterval(autoPartnerIncrease);
+    timeoutFunction();
   });
 });
 
@@ -31,6 +42,8 @@ partner_section_btns.forEach((btn) => {
     }
 
     getData(partnerNumber);
+    clearInterval(autoPartnerIncrease);
+    timeoutFunction();
   });
 });
 
@@ -73,7 +86,4 @@ function generatePartners(data, number) {
 
 // Call getData Function
 getData(partnerNumber);
-const autoPartnerIncrease = setInterval(() => {
-  partnerNumber += 3;
-  getData(partnerNumber);
-}, 10000);
+timeoutFunction();
