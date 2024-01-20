@@ -12,7 +12,7 @@ function timeoutFunction() {
   autoPartnerIncrease = setInterval(() => {
     partnerNumber += 3;
     getData(partnerNumber);
-  }, 3000);
+  }, 10000);
 }
 
 // Small dots
