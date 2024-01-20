@@ -2,42 +2,82 @@ const partner_section_btns = document.querySelectorAll(".partner_section_btn");
 const partners_div = document.getElementById("partners_div");
 const partners_nav = document.getElementById("partners_nav");
 
-let partnerNumber = 3;
-let autoPartnerIncrease;
+async function partnersFunction() {
+  let data;
+  let partnerNumber = 3;
+  let autoPartnerIncrease;
 
-// Timeout Function - Showing more partners
-function timeoutFunction() {
-  autoPartnerIncrease = setInterval(() => {
-    partnerNumber += 3;
-    getData(partnerNumber);
-  }, 10000);
-}
+  try {
+    const response = await fetch("./src/data/partners.json");
 
-// Next | Previous buttons
-partner_section_btns.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    if (btn.id === "prev_btn") {
-      partnerNumber -= 3;
-    } else if (btn.id === "next_btn") {
-      partnerNumber += 3;
+    const jsonData = await response.json();
+
+    data = Object.values(jsonData);
+    const maxNumber = data.length + 3 - (data.length % 3);
+    generateDots(maxNumber);
+  } catch (error) {
+    console.error(error);
+  }
+
+  // Next | Previous buttons
+  partner_section_btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (btn.id === "prev_btn") {
+        partnerNumber -= 3;
+      } else if (btn.id === "next_btn") {
+        partnerNumber += 3;
+      }
+
+      generatePartners(partnerNumber);
+      // Clearing previous timeout
+      clearInterval(autoPartnerIncrease);
+      // Starting new Timeout
+      timeoutFunction();
+    });
+  });
+
+  // Generating Dots
+  function generateDots(maxNum) {
+    // Clear innerHTML
+    partners_nav.innerHTML = "";
+
+    for (let i = 1; i <= maxNum / 3; i++) {
+      partners_nav.innerHTML += `<button class="partner_section_dot" id="dot-${i}"></button>`;
     }
 
-    getData(partnerNumber);
-    clearInterval(autoPartnerIncrease);
-    timeoutFunction();
-  });
-});
+    const partner_section_dots = document.querySelectorAll(
+      ".partner_section_dot"
+    );
 
-// GetData Function
-function getData(number) {
-  fetch("./src/data/partners.json")
-    .then((res) => res.json())
-    .then((data) => {
-      const valueData = Object.values(data);
-      const maxNumber = valueData.length + 3 - (valueData.length % 3);
+    // Adding EventListener
+    partner_section_dots.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        const id = e.target.id.split("-")[1];
+        partnerNumber = Number(id) * 3;
 
-      generateDots(maxNumber);
+        generatePartners(partnerNumber);
+        // Clearing previous timeout
+        clearInterval(autoPartnerIncrease);
+        // Starting new Timeout
+        timeoutFunction();
+      });
+    });
+  }
 
+  // Show data
+  function generatePartners(number) {
+    !partners_div.classList.contains("fade") &&
+      partners_div.classList.add("fade");
+
+    // Fade Animation
+    setTimeout(() => {
+      partners_div.classList.contains("fade") &&
+        partners_div.classList.remove("fade");
+
+      // Clear Partners Div
+      partners_div.innerHTML = "";
+
+      const maxNumber = data.length + 3 - (data.length % 3);
       if (number <= 0) {
         number = maxNumber;
         partnerNumber = maxNumber;
@@ -46,53 +86,24 @@ function getData(number) {
         partnerNumber = 3;
       }
 
-      !partners_div.classList.contains("fade") &&
-        partners_div.classList.add("fade");
-      setTimeout(() => {
-        partners_div.innerHTML = "";
-        generatePartners(valueData, number);
-      }, 200);
-    })
-    .catch((err) => console.error(err));
-}
-
-// Show data
-function generatePartners(data, number) {
-  partners_div.classList.contains("fade") &&
-    partners_div.classList.remove("fade");
-  for (let i = number - 3; i < number; i++) {
-    if (data[i]) {
-      partners_div.innerHTML += `<img src="${data[i].image}" alt="${data[i].name}">`;
-    }
-  }
-}
-
-// Generating Dots
-function generateDots(maxNum) {
-  // Clear innerHTML
-  partners_nav.innerHTML = "";
-
-  for (let i = 1; i <= maxNum / 3; i++) {
-    partners_nav.innerHTML += `<button class="partner_section_dot" id="dot-${i}"></button>`;
+      for (let i = number - 3; i < number; i++) {
+        if (data[i]) {
+          partners_div.innerHTML += `<img src="${data[i].image}" alt="${data[i].name}">`;
+        }
+      }
+    }, 200);
   }
 
-  const partner_section_dots = document.querySelectorAll(
-    ".partner_section_dot"
-  );
+  // Timeout Function - Showing more partners
+  function timeoutFunction() {
+    autoPartnerIncrease = setInterval(() => {
+      partnerNumber += 3;
+      generatePartners(partnerNumber);
+    }, 10000);
+  }
 
-  // Adding EventListener
-  partner_section_dots.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      const id = e.target.id.split("-")[1];
-      partnerNumber = Number(id) * 3;
-
-      getData(partnerNumber);
-      clearInterval(autoPartnerIncrease);
-      timeoutFunction();
-    });
-  });
+  generatePartners(partnerNumber);
+  timeoutFunction();
 }
 
-// Call getData Function
-getData(partnerNumber);
-timeoutFunction();
+partnersFunction();
