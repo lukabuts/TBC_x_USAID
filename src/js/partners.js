@@ -1,8 +1,6 @@
 const partner_section_btns = document.querySelectorAll(".partner_section_btn");
 const partners_div = document.getElementById("partners_div");
-const partner_section_buttons = document.querySelectorAll(
-  ".partner_section_button"
-);
+const partners_nav = document.getElementById("partners_nav");
 
 let partnerNumber = 3;
 let autoPartnerIncrease;
@@ -14,23 +12,6 @@ function timeoutFunction() {
     getData(partnerNumber);
   }, 10000);
 }
-
-// Small dots
-partner_section_buttons.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    if (e.target.id == 1) {
-      partnerNumber = 3;
-    } else if (e.target.id == 2) {
-      partnerNumber = 6;
-    } else if (e.target.id == 3) {
-      partnerNumber = 9;
-    }
-
-    getData(partnerNumber);
-    clearInterval(autoPartnerIncrease);
-    timeoutFunction();
-  });
-});
 
 // Next | Previous buttons
 partner_section_btns.forEach((btn) => {
@@ -54,6 +35,8 @@ function getData(number) {
     .then((data) => {
       const valueData = Object.values(data);
       const maxNumber = valueData.length + 3 - (valueData.length % 3);
+
+      generateDots(maxNumber);
 
       if (number <= 0) {
         number = maxNumber;
@@ -82,6 +65,32 @@ function generatePartners(data, number) {
       partners_div.innerHTML += `<img src="${data[i].image}" alt="${data[i].name}">`;
     }
   }
+}
+
+// Generating Dots
+function generateDots(maxNum) {
+  // Clear innerHTML
+  partners_nav.innerHTML = "";
+
+  for (let i = 1; i <= maxNum / 3; i++) {
+    partners_nav.innerHTML += `<button class="partner_section_dot" id="dot-${i}"></button>`;
+  }
+
+  const partner_section_dots = document.querySelectorAll(
+    ".partner_section_dot"
+  );
+
+  // Adding EventListener
+  partner_section_dots.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const id = e.target.id.split("-")[1];
+      partnerNumber = Number(id) * 3;
+
+      getData(partnerNumber);
+      clearInterval(autoPartnerIncrease);
+      timeoutFunction();
+    });
+  });
 }
 
 // Call getData Function

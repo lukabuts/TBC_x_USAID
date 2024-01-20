@@ -521,8 +521,8 @@ body {
 }
 .section4 nav {
   position: absolute;
-  bottom: 4rem;
-  left: 50%;
+  bottom: 3rem;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
