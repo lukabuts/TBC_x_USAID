@@ -9,6 +9,18 @@
 html {
   color: $white_color;
   font-family: sans-serif;
+
+  @media only screen and (max-width: $smallest_screen) {
+    font-size: 6px;
+  }
+
+  @media only screen and (max-width: $small_screen) {
+    font-size: 10px;
+  }
+
+  @media only screen and (max-width: $medium_screen) {
+    font-size: 12px;
+  }
 }
 
 ul,
