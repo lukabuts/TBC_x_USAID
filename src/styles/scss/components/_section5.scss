@@ -34,7 +34,7 @@
       // Question
       .question {
         border-bottom: 1px solid $section5_question_title_border_color;
-        padding: $section5_question_y_padding 0;
+        padding: $section5_question_y_margin 0;
         // Question title
         .question_title {
           @include flex;
