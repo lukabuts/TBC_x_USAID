@@ -1,0 +1,58 @@
+footer {
+  background-color: $dark_bg;
+  .wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: $max_content_width;
+    padding: $section5_y_padding $content_x_padding;
+    margin: auto;
+
+    @media only screen and (max-width: 354px) {
+      justify-content: center;
+      gap: 4rem;
+    }
+
+    // Left Side
+    .left_side {
+      @include flex($align: start);
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    // right_side
+    .right_side {
+      @include flex;
+      flex-direction: column;
+      gap: 1.5rem;
+
+      //   Social media
+      .social_media {
+        @include flex;
+        gap: 1.2rem;
+      }
+
+      //   contact_us
+      .contact_us {
+        button {
+          a {
+            background-color: $blue_color;
+            color: $white_color;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            letter-spacing: 1.2px;
+
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+              background-color: lightgray;
+              color: rgb(116, 116, 116);
+            }
+          }
+        }
+      }
+    }
+  }
+}
