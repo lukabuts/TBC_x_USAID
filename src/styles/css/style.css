@@ -136,6 +136,7 @@ body {
   #header .wrapper .header_content nav.active {
     right: 0;
     display: block;
+    height: 100dvh;
     -webkit-animation: animateNav 0.3s;
             animation: animateNav 0.3s;
   }
@@ -636,7 +637,7 @@ footer .wrapper {
       flex-wrap: wrap;
   gap: 2rem;
   max-width: 63.75rem;
-  padding: 6.56rem 1.25rem;
+  padding: 3.28rem 1.25rem;
   margin: auto;
 }
 @media only screen and (max-width: 354px) {

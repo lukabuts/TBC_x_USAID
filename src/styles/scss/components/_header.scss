@@ -63,6 +63,7 @@
           &.active {
             right: 0;
             display: block;
+            height: 100dvh;
             animation: animateNav 0.3s;
 
             @keyframes animateNav {

@@ -5,7 +5,7 @@ footer {
     flex-wrap: wrap;
     gap: 2rem;
     max-width: $max_content_width;
-    padding: $section5_y_padding $content_x_padding;
+    padding: calc($section5_y_padding / 2) $content_x_padding;
     margin: auto;
 
     @media only screen and (max-width: 354px) {
