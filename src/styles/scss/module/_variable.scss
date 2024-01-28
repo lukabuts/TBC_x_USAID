@@ -6,6 +6,7 @@ $darkest_color: rgb(22, 22, 22);
 $header_dark_bg: rgb(26, 30, 31);
 $header_light_bg: rgba(34, 34, 34, 0.949);
 $course_div_border_color: rgba(85, 85, 85, 1);
+$section5_question_title_border_color: rgb(53, 49, 49);
 
 // Spacing
 $max_content_width: 63.75rem;
@@ -30,6 +31,10 @@ $courses_gap: 2.5rem 1.75rem;
 
 $section4_btn_margin: 6.25rem;
 $section4_y_padding: 2.125rem 0 5rem 0;
+
+$section5_y_padding: 6.56rem;
+$section5_title_y_padding: 2.5rem;
+$section5_question_y_margin: 1rem;
 
 // Screen Width
 $smallest_screen: 28.125rem;

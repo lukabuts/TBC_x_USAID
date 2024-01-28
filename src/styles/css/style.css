@@ -263,14 +263,14 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-.section1 h3 {
+.section1 h1 {
   font-size: 2.5rem;
   width: 100%;
   max-width: 63.75rem;
   margin: auto;
   padding: 0 1.25rem;
 }
-.section1 h3 span {
+.section1 h1 span {
   line-height: 1.6rem;
 }
 .section1 .img-div {
@@ -541,4 +541,80 @@ body {
   background: rgb(244, 244, 244);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.section5 {
+  background-color: rgb(22, 22, 22);
+}
+.section5 .wrapper {
+  max-width: 63.75rem;
+  padding: 6.56rem 1.25rem;
+  margin: auto;
+}
+.section5 .wrapper .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.5rem 0;
+}
+.section5 .wrapper .title h2 {
+  font-weight: 500;
+}
+.section5 .wrapper .title a {
+  color: rgb(0, 163, 224);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.section5 .wrapper .title a:hover {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section5 .wrapper .title a:not(:hover) {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+.section5 .wrapper .title a:hover {
+  color: rgb(244, 244, 244);
+}
+.section5 .wrapper .questions .question {
+  border-bottom: 1px solid rgb(53, 49, 49);
+  padding: 1rem 0;
+}
+.section5 .wrapper .questions .question .question_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.section5 .wrapper .questions .question .question_title h3 {
+  font-weight: 500;
+}
+.section5 .wrapper .questions .question .question_title .img {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.section5 .wrapper .questions .question .answer {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.section5 .wrapper .questions .question.opened .question_title .img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.section5 .wrapper .questions .question.opened .answer {
+  margin: 1rem 0;
 }

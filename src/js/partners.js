@@ -53,6 +53,7 @@ async function partnersFunction() {
     partner_section_dots.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = e.target.id.split("-")[1];
+        if (partnerNumber === Number(id) * 3) return;
         partnerNumber = Number(id) * 3;
 
         generatePartners(partnerNumber);
